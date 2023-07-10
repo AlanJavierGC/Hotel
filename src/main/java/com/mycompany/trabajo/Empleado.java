@@ -65,5 +65,5 @@ public abstract class Empleado {
     public int GetJornada() {
         return Jornada;
     }
-    
+    //
 }
