@@ -15,6 +15,6 @@ public class recepcionista extends Empleado{
     }
     
     public void Obligaciones(){
-        System.out.println("Atiende a los nuevos visitantes");
+        System.out.println("Atiende a los nuevos visitantes atiende el telefono");
     }
 }
