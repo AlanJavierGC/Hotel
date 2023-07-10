@@ -14,7 +14,7 @@ public abstract class Empleado {
     private String Fec_Nac;
     private String Puesto;
     private int Jornada;
- 
+ //Este es el "main"//
     
     public Empleado (String num, String nom, String date, String puesto, int jor){
         this.ID = num;
