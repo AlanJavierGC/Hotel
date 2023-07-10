@@ -16,6 +16,6 @@ public class Botones extends Empleado{
     }
         
         public void Obligaciones(){
-            System.out.println("Lleva maletas a las habiatciones");
+            System.out.println("Lleva maletas a las habiatciones" + "Ayuda a las personas");
         }
 }
