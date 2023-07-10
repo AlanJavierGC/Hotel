@@ -25,6 +25,11 @@ public abstract class Empleado {
     }
     
     public abstract void Obligaciones();
+    
+    public double sueldo(int hrs){
+        double sueldo = hrs * 80;
+        return sueldo;
+    }
 
     public void SetID (String id){
         this.Nombre = id;

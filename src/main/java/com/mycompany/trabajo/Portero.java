@@ -12,8 +12,33 @@ public class Portero extends Empleado {
     public Portero (String Id, String Nombre, String Fec_Nac, String Puesto, int Jornada){
         super(Id, Nombre, Fec_Nac, Puesto, Jornada);
     }
-    public void Obligaciones(){
-        System.out.println("Atiende la puerta");
+    
+    // polimorfismo
+    @Override
+    public double sueldo(int hrs){
+        int extra = 0;
+        int hrsext = hrs - 28;
+        
+        if (hrs <= 28){
+            hrs = hrs * 90;
+        }
+        
+        if (hrsext >= 0){
+            extra = hrsext * 180;
+        }
+        
+        double s = hrs + extra;
+        
+        return s;
+    }
+    
+    // abstraccion
+
+    @Override
+    public void Obligaciones() {
+        System.out.println("/t Abrir o cerrar las puertas del hotel" + 
+                           "/t Dar la bienvenida y despedida del cliente" +
+                           "/t Ayudar al visitante con su equipaje hasta la recepcion.");
     }
 
 }

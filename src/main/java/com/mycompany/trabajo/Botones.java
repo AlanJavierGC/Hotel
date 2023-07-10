@@ -10,12 +10,32 @@ package com.mycompany.trabajo;
  */
 public class Botones extends Empleado{
     
+    public Botones (String Id, String Nombre, String Fec_Nac, String Puesto, int Jornada){
+    super(Id, Nombre, Fec_Nac, Puesto, Jornada);
+    }
     
-        public Botones (String Id, String Nombre, String Fec_Nac, String Puesto, int Jornada){
-        super(Id, Nombre, Fec_Nac, Puesto, Jornada);
+    // polimorfismo
+    @Override
+    public double sueldo(int hrs){
+        int extra = 0;
+        int hrsext = hrs - 48;
+        
+        if (hrs <= 48){
+            hrs = hrs * 80;
+        }
+        
+        double s = hrs;
+        
+        return s;
+    }
+    
+    //     
+    public void Obligaciones(){
+        System.out.println("/t Lleva maletas a las habiatciones" +
+                           "/t Te lleva a tu habitacion" +
+                           "/t Te ayuda con lo que puede");
     }
         
-        public void Obligaciones(){
-            System.out.println("Lleva maletas a las habiatciones" + "Ayuda a las personas");
-        }
+    
+        
 }
