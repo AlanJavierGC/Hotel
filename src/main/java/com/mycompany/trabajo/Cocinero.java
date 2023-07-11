@@ -33,6 +33,7 @@ public class Cocinero extends Empleado{
         return s;
     }
     
+    // abstraccion
     public void Obligaciones(){
         System.out.println("/t Prepara los desayunos" + 
                            "/t Pepara la comida" +

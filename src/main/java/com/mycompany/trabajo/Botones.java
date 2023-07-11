@@ -29,7 +29,7 @@ public class Botones extends Empleado{
         return s;
     }
     
-    //     
+    // abstraccion
     public void Obligaciones(){
         System.out.println("/t Lleva maletas a las habiatciones" +
                            "/t Te lleva a tu habitacion" +
