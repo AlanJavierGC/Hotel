@@ -32,7 +32,7 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Botoneros");
+        jLabel1.setText("Recepcionistas");
 
         jButton1.setText("Eliminar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
