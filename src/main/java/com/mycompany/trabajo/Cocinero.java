@@ -9,7 +9,7 @@ package com.mycompany.trabajo;
  * @author Familiar
  */
 public class Cocinero extends Empleado{
-    
+    String Puesto;
     public Cocinero (String Id, String Nombre, String Fec_Nac, String Puesto, int Jornada){
         super(Id, Nombre, Fec_Nac, Puesto, Jornada);
     }
@@ -32,6 +32,14 @@ public class Cocinero extends Empleado{
         
         return s;
     }
+    
+    public void setEspec(String especialidasd){
+        this.Puesto = especialidasd;
+    }
+    public String getEspec(){
+        return Puesto;
+    }
+    
     
     // abstraccion
     public void Obligaciones(){
