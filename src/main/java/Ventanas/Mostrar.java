@@ -10,12 +10,12 @@ import java.awt.BorderLayout;
  *
  * @author jajas
  */
-public class Registrar extends javax.swing.JPanel {
+public class Mostrar extends javax.swing.JPanel {
 
     /**
-     * Creates new form Registrar
+     * Creates new form Mostrar
      */
-    public Registrar() {
+    public Mostrar() {
         initComponents();
     }
 
@@ -34,7 +34,7 @@ public class Registrar extends javax.swing.JPanel {
         content = new javax.swing.JPanel();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Registro empleados");
+        jLabel1.setText("Mostrar empleados");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Selecciona una opcion:");
@@ -82,7 +82,7 @@ public class Registrar extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

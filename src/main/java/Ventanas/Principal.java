@@ -143,13 +143,13 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         // instancia
-        BotonesMostrar botMost = new BotonesMostrar();
+        Mostrar most = new Mostrar();
         
-        botMost.setSize(550, 328);
-        botMost.setLocation(0, 0);
+        most.setSize(550, 328);
+        most.setLocation(0, 0);
 
         content.removeAll();
-        content.add(botMost, BorderLayout.CENTER);
+        content.add(most, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
     }//GEN-LAST:event_jMenu2MouseClicked
