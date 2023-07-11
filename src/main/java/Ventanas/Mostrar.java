@@ -92,10 +92,10 @@ public class Mostrar extends javax.swing.JPanel {
         String elemento = jComboBox1.getSelectedItem().toString(); // convierte a cadena lo que devuelve el getSelectedIndex
 
         // instancias
-        Cocinero cociPage = new Cocinero();
-        Mucama mucaPage = new Mucama();
-        Recepcionista recePage = new Recepcionista();
-        Portero portPage = new Portero();
+        CocineroMostrar cociPage = new CocineroMostrar();
+        MucamaMostrar mucaPage = new MucamaMostrar();
+        RecepcionistaMostrar recePage = new RecepcionistaMostrar();
+        PorteroMostrar portPage = new PorteroMostrar();
         BotonesMostrar botoPage = new BotonesMostrar();
 
         // Cocinero
