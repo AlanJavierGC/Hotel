@@ -230,9 +230,8 @@ public class Cocinero extends javax.swing.JPanel {
         // TODO add your handling code here:
         ArrayList<com.mycompany.trabajo.Cocinero> Miembros = new ArrayList<com.mycompany.trabajo.Cocinero>();
         
-        com.mycompany.trabajo.Cocinero Miembro = new com.mycompany.trabajo.Cocinero (ans1,ans2,ans3,ans4,ans6);
+        com.mycompany.trabajo.Cocinero Miembro = new com.mycompany.trabajo.Cocinero ("a","b","c","d",5);
         Miembros.add(Miembro);
-        System.out.println(Miembros);
         
     }//GEN-LAST:event_GuardarArrayMouseClicked
 
