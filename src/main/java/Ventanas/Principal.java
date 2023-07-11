@@ -44,10 +44,10 @@ public class Principal extends javax.swing.JFrame {
         menu5 = new java.awt.Menu();
         menu6 = new java.awt.Menu();
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -79,126 +79,60 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cocinero", "Mucama", "Recepcionista", "Portero", "Botones" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Registro empleados");
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Selecciona una opcion:");
-
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 550, Short.MAX_VALUE)
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 329, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
+
+        jMenu1.setText("Registrar");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Mostrar");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
-                .addContainerGap(240, Short.MAX_VALUE))
-            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(content, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
         // TODO add your handling code here:
-        int indice = jComboBox1.getSelectedIndex(); // Devuelve en que posicion de la lista esta el elemento seleccionado
-        String elemento = jComboBox1.getSelectedItem().toString(); // convierte a cadena lo que devuelve el getSelectedIndex
         
-        // instancias
-        Cocinero cociPage = new Cocinero();
-        Mucama mucaPage = new Mucama();
-        Recepcionista recePage = new Recepcionista();
-        Portero portPage = new Portero();
-        Botones botoPage = new Botones();
+        // instancia
+        Registrar regiPage = new Registrar();
         
-        // Cocinero
-        if (indice == 0){
-            cociPage.setSize(550, 328);
-            cociPage.setLocation(0, 0);
+        regiPage.setSize(550, 328);
+        regiPage.setLocation(0, 0);
 
-            content.removeAll();
-            content.add(cociPage, BorderLayout.CENTER);
-            content.revalidate();
-            content.repaint();
-        }
-        // Mucama
-        else if (indice == 1){
-            mucaPage.setSize(550, 328);
-            mucaPage.setLocation(0, 0);
-
-            content.removeAll();
-            content.add(mucaPage, BorderLayout.CENTER);
-            content.revalidate();
-            content.repaint();
-        }
-        // Recepcionista
-        else if (indice == 2){
-            recePage.setSize(550, 328);
-            recePage.setLocation(0, 0);
-
-            content.removeAll();
-            content.add(recePage, BorderLayout.CENTER);
-            content.revalidate();
-            content.repaint();
-        }
-        // Portero
-        else if(indice == 3){
-            portPage.setSize(550, 328);
-            portPage.setLocation(0, 0);
-
-            content.removeAll();
-            content.add(portPage, BorderLayout.CENTER);
-            content.revalidate();
-            content.repaint();
-        }
-        // Botones
-        else if(indice == 4){
-            botoPage.setSize(550, 328);
-            botoPage.setLocation(0, 0);
-
-            content.removeAll();
-            content.add(botoPage, BorderLayout.CENTER);
-            content.revalidate();
-            content.repaint();
-        }
-        
-        
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+        content.removeAll();
+        content.add(regiPage, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }//GEN-LAST:event_jMenu1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -240,9 +174,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel content;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
     private java.awt.Menu menu3;
