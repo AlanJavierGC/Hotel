@@ -10,12 +10,12 @@ import java.awt.BorderLayout;
  *
  * @author jajas
  */
-public class Registrar extends javax.swing.JPanel {
+public class Mostrar extends javax.swing.JPanel {
 
     /**
-     * Creates new form Registrar
+     * Creates new form Mostrar
      */
-    public Registrar() {
+    public Mostrar() {
         initComponents();
     }
 
@@ -34,7 +34,7 @@ public class Registrar extends javax.swing.JPanel {
         content = new javax.swing.JPanel();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Registro empleados");
+        jLabel1.setText("Mostrar empleados");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Selecciona una opcion:");
@@ -82,7 +82,7 @@ public class Registrar extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -92,11 +92,11 @@ public class Registrar extends javax.swing.JPanel {
         String elemento = jComboBox1.getSelectedItem().toString(); // convierte a cadena lo que devuelve el getSelectedIndex
 
         // instancias
-        Cocinero cociPage = new Cocinero();
-        Mucama mucaPage = new Mucama();
-        Recepcionista recePage = new Recepcionista();
-        Portero portPage = new Portero();
-        Botones botoPage = new Botones();
+        CocineroMostrar cociPage = new CocineroMostrar();
+        MucamaMostrar mucaPage = new MucamaMostrar();
+        RecepcionistaMostrar recePage = new RecepcionistaMostrar();
+        PorteroMostrar portPage = new PorteroMostrar();
+        BotonesMostrar botoPage = new BotonesMostrar();
 
         // Cocinero
         if (indice == 0){

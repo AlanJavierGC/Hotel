@@ -80,8 +80,15 @@ public class Cocinero extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("Jornada: ");
 
+<<<<<<< HEAD
         Jor_cocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4", "5", "6", "7", "8" }));
         Jor_cocinero.addActionListener(new java.awt.event.ActionListener() {
+=======
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "", "3", "4", "5", "6" }));
+
+        jButton1.setText("Guardar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> f41ebc0d02d3c0023ce764ef872f00e5ad99a6c4
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jor_cocineroActionPerformed(evt);
             }
