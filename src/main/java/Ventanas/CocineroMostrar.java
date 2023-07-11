@@ -8,12 +8,12 @@ package Ventanas;
  *
  * @author jajas
  */
-public class BotonesMostrar extends javax.swing.JPanel {
+public class CocineroMostrar extends javax.swing.JPanel {
 
     /**
-     * Creates new form BotonesMostrar
+     * Creates new form CocineroMostrar
      */
-    public BotonesMostrar() {
+    public CocineroMostrar() {
         initComponents();
     }
 
@@ -27,33 +27,12 @@ public class BotonesMostrar extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Botoneros");
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "Nombre", "Fech. Nac", "Jornada", "Peso", "Sueldo"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Double.class, java.lang.Double.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane2.setViewportView(jTable1);
+        jLabel1.setText("Cocineros");
 
         jButton1.setText("Eliminar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -61,6 +40,27 @@ public class BotonesMostrar extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nombre", "Fech. Nac", "Jornada", "Titulo", "Especialidad", "Sueldo"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

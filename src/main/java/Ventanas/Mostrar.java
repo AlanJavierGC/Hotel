@@ -96,7 +96,7 @@ public class Mostrar extends javax.swing.JPanel {
         Mucama mucaPage = new Mucama();
         Recepcionista recePage = new Recepcionista();
         Portero portPage = new Portero();
-        Botones botoPage = new Botones();
+        BotonesMostrar botoPage = new BotonesMostrar();
 
         // Cocinero
         if (indice == 0){
