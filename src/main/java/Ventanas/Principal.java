@@ -22,8 +22,15 @@ public class Principal extends javax.swing.JFrame {
         
         
     }
+    //Informacion de cocinero
     public static ArrayList<String> Especialidad = new ArrayList<>();
-    public static ArrayList<com.mycompany.trabajo.Cocinero> MiembrosC = new ArrayList<com.mycompany.trabajo.Cocinero>();
+    public static ArrayList<Integer> Sueldo = new ArrayList<>();
+    public static ArrayList<trabajo.Cocinero> MiembrosC = new ArrayList<trabajo.Cocinero>();
+    
+    //Informacion de portero
+    public static ArrayList<String> edades = new ArrayList<>();
+    public static ArrayList<Integer> SueldoP = new ArrayList<>();
+    public static ArrayList<trabajo.Portero> MiembrosP = new ArrayList<trabajo.Portero>();
 
     /**
      * This method is callerom within the constructor to initialize the form.

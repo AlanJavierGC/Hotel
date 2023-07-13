@@ -230,7 +230,7 @@ public class Cocinero extends javax.swing.JPanel {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_Espec_cocineroActionPerformed
-    ArrayList<com.mycompany.trabajo.Cocinero> Miembros = new ArrayList<com.mycompany.trabajo.Cocinero>();
+    ArrayList<trabajo.Cocinero> Miembros = new ArrayList<trabajo.Cocinero>();
     
     private void GuardarArrayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarArrayMouseClicked
         // TODO add your handling code here:
@@ -243,8 +243,7 @@ public class Cocinero extends javax.swing.JPanel {
         ans6 = Integer.parseInt(Alt);
 
         
-        com.mycompany.trabajo.Cocinero Miembro = new com.mycompany.trabajo.Cocinero (ans1,ans2,ans3,ans4,ans6);
-
+        trabajo.Cocinero Miembro = new trabajo.Cocinero (ans1,ans2,ans3,ans4,ans6);
         Principal.MiembrosC.add(Miembro);
         Principal.Especialidad.add(ans5);
         

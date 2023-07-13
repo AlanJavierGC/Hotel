@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.trabajo;
+package trabajo;
 
 /**
  *
@@ -18,7 +18,7 @@ public class Cocinero extends Empleado{
     @Override
     public double sueldo(int hrs){
         int extra = 0;
-        int hrsext = hrs - 48;
+        int hrsext = (hrs*6) - 48;
         
         if (hrs <= 48){
             hrs = hrs * 160;

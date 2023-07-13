@@ -104,11 +104,18 @@ public class CocineroMostrar extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+         int actual_row = (int) Tabla_cocinero.getSelectedRow();
+         System.out.println(actual_row);
+         
+         Principal.Especialidad.remove(actual_row);
+         Principal.MiembrosC.remove(actual_row);
+
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel modelodef = new DefaultTableModel(new String[]{"Id", "Nombre", "Fec_Nac", "Tit", "Jor", "Espec", "Sueldo"},Principal.MiembrosC.size()+2) ;
+        DefaultTableModel modelodef = new DefaultTableModel(new String[]{"Id", "Nombre", "Fecha de nacimiento", "Titulo", "Jornada", "Especialidad", "Sueldo"},Principal.MiembrosC.size()+2) ;
         Tabla_cocinero.setModel((modelodef));
         TableModel model = Tabla_cocinero.getModel();
         
@@ -121,6 +128,7 @@ public class CocineroMostrar extends javax.swing.JPanel {
             model.setValueAt(Principal.MiembrosC.get(i).GetJornada(), i, 4);
             model.setValueAt(Principal.Especialidad.get(i), i, 5);
             model.setValueAt(Principal.Especialidad.get(i), i, 6);
+            model.setValueAt(0, i, 6);
         }
         
     }//GEN-LAST:event_RefreshActionPerformed
