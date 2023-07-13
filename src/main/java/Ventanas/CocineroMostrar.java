@@ -4,6 +4,11 @@
  */
 package Ventanas;
 
+import java.util.ArrayList;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 /**
  *
  * @author jajas
@@ -16,7 +21,7 @@ public class CocineroMostrar extends javax.swing.JPanel {
     public CocineroMostrar() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,7 +34,8 @@ public class CocineroMostrar extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        Tabla_cocinero = new javax.swing.JTable();
+        Refresh = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Cocineros");
@@ -41,7 +47,7 @@ public class CocineroMostrar extends javax.swing.JPanel {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        Tabla_cocinero.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -49,18 +55,25 @@ public class CocineroMostrar extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Fech. Nac", "Jornada", "Titulo", "Especialidad", "Sueldo"
+                "ID", "Nombre", "Fech. Nac", "Titulo", "Jornada", "Especialidad", "Sueldo"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(Tabla_cocinero);
+
+        Refresh.setText("Actualizar");
+        Refresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RefreshActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -69,6 +82,8 @@ public class CocineroMostrar extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
+                .addGap(28, 28, 28)
+                .addComponent(Refresh)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -80,7 +95,8 @@ public class CocineroMostrar extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1)
+                    .addComponent(Refresh))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE))
         );
@@ -90,11 +106,31 @@ public class CocineroMostrar extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel modelodef = new DefaultTableModel(new String[]{"Id", "Nombre", "Fec_Nac", "Tit", "Jor", "Espec", "Sueldo"},Principal.MiembrosC.size()+2) ;
+        Tabla_cocinero.setModel((modelodef));
+        TableModel model = Tabla_cocinero.getModel();
+        
+        for(int i = 0; i<Principal.MiembrosC.size(); i++){ 
+            Object miembro = Principal.MiembrosC.get(i);
+            model.setValueAt(Principal.MiembrosC.get(i).GetID(), i, 0);
+            model.setValueAt(Principal.MiembrosC.get(i).GetNombre(), i, 1);
+            model.setValueAt(Principal.MiembrosC.get(i).GetFecha(), i, 2);
+            model.setValueAt(Principal.MiembrosC.get(i).GetPuesto(), i, 3);
+            model.setValueAt(Principal.MiembrosC.get(i).GetJornada(), i, 4);
+            model.setValueAt(Principal.Especialidad.get(i), i, 5);
+            model.setValueAt(Principal.Especialidad.get(i), i, 6);
+        }
+        
+    }//GEN-LAST:event_RefreshActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Refresh;
+    private javax.swing.JTable Tabla_cocinero;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

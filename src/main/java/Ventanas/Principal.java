@@ -5,6 +5,8 @@
 package Ventanas;
 
 import java.awt.BorderLayout;
+import java.awt.List;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,6 +22,8 @@ public class Principal extends javax.swing.JFrame {
         
         
     }
+    public static ArrayList<String> Especialidad = new ArrayList<>();
+    public static ArrayList<com.mycompany.trabajo.Cocinero> MiembrosC = new ArrayList<com.mycompany.trabajo.Cocinero>();
 
     /**
      * This method is callerom within the constructor to initialize the form.
@@ -44,6 +48,7 @@ public class Principal extends javax.swing.JFrame {
         menu5 = new java.awt.Menu();
         menu6 = new java.awt.Menu();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jMenu3 = new javax.swing.JMenu();
         content = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -77,6 +82,8 @@ public class Principal extends javax.swing.JFrame {
         menu6.setLabel("Edit");
         menuBar3.add(menu6);
 
+        jMenu3.setText("jMenu3");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
@@ -87,7 +94,7 @@ public class Principal extends javax.swing.JFrame {
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 350, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Registrar");
@@ -118,26 +125,11 @@ public class Principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 50, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
-        // TODO add your handling code here:
-        
-        // instancia
-        Registrar regiPage = new Registrar();
-        
-        regiPage.setSize(550, 328);
-        regiPage.setLocation(0, 0);
-
-        content.removeAll();
-        content.add(regiPage, BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
-    }//GEN-LAST:event_jMenu1MouseClicked
 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
         // TODO add your handling code here:
@@ -153,6 +145,20 @@ public class Principal extends javax.swing.JFrame {
         content.revalidate();
         content.repaint();
     }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        // TODO add your handling code here:
+        // instancia
+        Registrar regiPage = new Registrar();
+
+        regiPage.setSize(550, 328);
+        regiPage.setLocation(0, 0);
+
+        content.removeAll();
+        content.add(regiPage, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }//GEN-LAST:event_jMenu1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -196,6 +202,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;

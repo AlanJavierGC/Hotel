@@ -17,7 +17,6 @@ public class Cocinero extends javax.swing.JPanel {
     String ans4;
     String ans5;
     int ans6;
-    
     /**
      * Creates new form Cocinero
      */
@@ -80,15 +79,8 @@ public class Cocinero extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("Jornada: ");
 
-<<<<<<< HEAD
-        Jor_cocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4", "5", "6", "7", "8" }));
+        Jor_cocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6", "7", "8" }));
         Jor_cocinero.addActionListener(new java.awt.event.ActionListener() {
-=======
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "", "3", "4", "5", "6" }));
-
-        jButton1.setText("Guardar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> f41ebc0d02d3c0023ce764ef872f00e5ad99a6c4
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jor_cocineroActionPerformed(evt);
             }
@@ -107,6 +99,11 @@ public class Cocinero extends javax.swing.JPanel {
         });
 
         jButton2.setText("Limpiar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("Titulo:");
@@ -206,17 +203,17 @@ public class Cocinero extends javax.swing.JPanel {
 
     private void Id_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Id_cocineroActionPerformed
         // TODO add your handling code here:
-        ans1 = this.Id_cocinero.getText();
+        
     }//GEN-LAST:event_Id_cocineroActionPerformed
 
     private void Nombre_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Nombre_cocineroActionPerformed
-        // TODO add your handling code here:
-        ans2 = this.Nombre_cocinero.getText();
+            // TODO add your handling code here:
+        
     }//GEN-LAST:event_Nombre_cocineroActionPerformed
 
     private void Fec_nac_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fec_nac_cocineroActionPerformed
         // TODO add your handling code here:
-        ans3 = this.Fec_nac_cocinero.getText();
+        
     }//GEN-LAST:event_Fec_nac_cocineroActionPerformed
 
     private void GuardarArrayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarArrayActionPerformed
@@ -225,28 +222,48 @@ public class Cocinero extends javax.swing.JPanel {
 
     private void Titulo_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Titulo_cocineroActionPerformed
         // TODO add your handling code here:
-        ans4 = this.Titulo_cocinero.getText();
+        
+        
     }//GEN-LAST:event_Titulo_cocineroActionPerformed
 
     private void Espec_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Espec_cocineroActionPerformed
         // TODO add your handling code here:
-        ans5 = this.Espec_cocinero.getText();
+        
     }//GEN-LAST:event_Espec_cocineroActionPerformed
-
+    ArrayList<com.mycompany.trabajo.Cocinero> Miembros = new ArrayList<com.mycompany.trabajo.Cocinero>();
+    
     private void GuardarArrayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarArrayMouseClicked
         // TODO add your handling code here:
-        ArrayList<com.mycompany.trabajo.Cocinero> Miembros = new ArrayList<com.mycompany.trabajo.Cocinero>();
-        
-        com.mycompany.trabajo.Cocinero Miembro = new com.mycompany.trabajo.Cocinero ("a","b","c","d",5);
-        Miembros.add(Miembro);
-        
-    }//GEN-LAST:event_GuardarArrayMouseClicked
-
-    private void Jor_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jor_cocineroActionPerformed
-        // TODO add your handling code here:
+        ans1 = Id_cocinero.getText();
+        ans2 = Nombre_cocinero.getText();
+        ans3 = Fec_nac_cocinero.getText();
+        ans4 = Titulo_cocinero.getText();
+        ans5 = Espec_cocinero.getText();
         String Alt = this.Jor_cocinero.getSelectedItem().toString();
         ans6 = Integer.parseInt(Alt);
+
+        
+        com.mycompany.trabajo.Cocinero Miembro = new com.mycompany.trabajo.Cocinero (ans1,ans2,ans3,ans4,ans6);
+
+        Principal.MiembrosC.add(Miembro);
+        Principal.Especialidad.add(ans5);
+        
+        int T = Principal.MiembrosC.size();
+        for(int i=0; i<T; i++){
+            System.out.println( Principal.MiembrosC.get(i).GetID() + " " + Principal.MiembrosC.get(i).GetNombre() + " " + Principal.MiembrosC.get(i).GetFecha() + " " + Principal.MiembrosC.get(i).GetPuesto() + " " + Principal.MiembrosC.get(i).GetJornada());
+        }
+        System.out.println("--------");
+    }//GEN-LAST:event_GuardarArrayMouseClicked
+    
+    
+    private void Jor_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jor_cocineroActionPerformed
+        // TODO add your handling code here:
     }//GEN-LAST:event_Jor_cocineroActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
