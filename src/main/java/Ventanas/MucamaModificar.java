@@ -8,17 +8,17 @@ package Ventanas;
  *
  * @author jajas
  */
-public class BotonesModificar extends javax.swing.JPanel {
-    String Id_cocineroa;
-    String Nombre_cocineroa;
-    String Fec_nac_cocineroa;
-    int Jor_cocineroa;
+public class MucamaModificar extends javax.swing.JPanel {
+    
+    String Id_mucamaa;
+    String Nombre_mucamaa;
+    String Fec_nac_mucamaa;
+    int Jor_mucamaa;
     int Sueldo;
-    String Pesoa;
     /**
-     * Creates new form BotonesModificar
+     * Creates new form MucamaModificar
      */
-    public BotonesModificar() {
+    public MucamaModificar() {
         initComponents();
     }
 
@@ -42,8 +42,6 @@ public class BotonesModificar extends javax.swing.JPanel {
         Jor_cocinero = new javax.swing.JComboBox<>();
         GuardarArray = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        Peso = new javax.swing.JTextField();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("ID: ");
@@ -101,15 +99,6 @@ public class BotonesModificar extends javax.swing.JPanel {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setText("Peso:");
-
-        Peso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PesoActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -129,21 +118,16 @@ public class BotonesModificar extends javax.swing.JPanel {
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Jor_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Nombre_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Fec_nac_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Peso, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(126, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLabel2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Nombre_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLabel3)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Fec_nac_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(322, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,8 +143,6 @@ public class BotonesModificar extends javax.swing.JPanel {
                         .addComponent(Fec_nac_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(Peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addComponent(Nombre_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(32, 32, 32)))
@@ -213,31 +195,27 @@ public class BotonesModificar extends javax.swing.JPanel {
     }//GEN-LAST:event_Jor_cocineroActionPerformed
 
     private void GuardarArrayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarArrayMouseClicked
-        
+
     }//GEN-LAST:event_GuardarArrayMouseClicked
 
     private void GuardarArrayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarArrayActionPerformed
         // TODO add your handling code here:
         // captura los datos
-        Id_cocineroa = Id_cocinero.getText();
-        Nombre_cocineroa = Nombre_cocinero.getText();
-        Fec_nac_cocineroa = Fec_nac_cocinero.getText();
+        Id_mucamaa = Id_cocinero.getText();
+        Nombre_mucamaa = Nombre_cocinero.getText();
+        Fec_nac_mucamaa = Fec_nac_cocinero.getText();
         String Alt = this.Jor_cocinero.getSelectedItem().toString();
-        Jor_cocineroa = Integer.parseInt(Alt);
-
-        Pesoa = Peso.getText();
-        
+        Jor_mucamaa = Integer.parseInt(Alt);
 
         //dETECTOR DE IDS REPETIDAS
         boolean found = false;
-        for (int i = 0; i < Principal.MiembrosB.size(); i++) {
-            trabajo.Botones miembro = Principal.MiembrosB.get(i);
-            if (miembro.GetID().equals(Id_cocineroa)) {
+        for (int i = 0; i < Principal.MiembrosM.size(); i++) {
+            trabajo.Mucama miembro = Principal.MiembrosM.get(i);
+            if (miembro.GetID().equals(Id_mucamaa)) {
                 // Si encontramos un objeto con el mismo ID, actualizamos sus atributos
-                miembro.SetNombre(Nombre_cocineroa);
-                miembro.SetFecha(Fec_nac_cocineroa);
-                miembro.SetJornada(Jor_cocineroa);
-                miembro.setPeso(Pesoa);
+                miembro.SetNombre(Nombre_mucamaa);
+                miembro.SetFecha(Fec_nac_mucamaa);
+                miembro.SetJornada(Jor_mucamaa);
                 found = true;
                 break;
             }
@@ -248,10 +226,6 @@ public class BotonesModificar extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void PesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PesoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PesoActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Fec_nac_cocinero;
@@ -259,13 +233,11 @@ public class BotonesModificar extends javax.swing.JPanel {
     private javax.swing.JTextField Id_cocinero;
     private javax.swing.JComboBox<String> Jor_cocinero;
     private javax.swing.JTextField Nombre_cocinero;
-    private javax.swing.JTextField Peso;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

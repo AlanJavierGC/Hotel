@@ -103,10 +103,10 @@ public class BotonesMostrar extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         int actual_row = (int) tablaBotones.getSelectedRow();
-         System.out.println(actual_row);
-         
-         
-         Principal.MiembrosB.remove(actual_row);
+        System.out.println(actual_row);
+
+
+        Principal.MiembrosB.remove(actual_row);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshActionPerformed

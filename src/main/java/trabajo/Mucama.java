@@ -9,8 +9,10 @@ package trabajo;
  * @author Familiar
  */
 public class Mucama extends Empleado {
-    public Mucama (String Id, String Nombre, String Fec_Nac, int Jornada){
+    public int Sueldo;
+    public Mucama (String Id, String Nombre, String Fec_Nac, int Jornada, int Sueldo){
         super(Id, Nombre, Fec_Nac, Jornada);
+        this.Sueldo = Sueldo;
     }
     
     
@@ -41,4 +43,14 @@ public class Mucama extends Empleado {
                            "/t Brindar un excelente servicio a cliente" +
                            "/t Mantener el equipo en buenas condiciones.");
     }
+
+    public int getSueldo() {
+        return Sueldo;
+    }
+
+    public void setSueldo(int Sueldo) {
+        this.Sueldo = Sueldo;
+    }
+    
+    
 }
