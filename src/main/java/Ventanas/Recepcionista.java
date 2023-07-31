@@ -12,7 +12,6 @@ public class Recepcionista extends javax.swing.JPanel {
     String ans1;
     String ans2;
     String ans3;
-    String ans5 = "Recepcionista";
     int ans6;
     String ans7;
     /**
@@ -133,11 +132,12 @@ public class Recepcionista extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(check, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(check, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -186,14 +186,11 @@ public class Recepcionista extends javax.swing.JPanel {
             ans7 = "No";
         }
         
-        trabajo.Recepcionista Miembro = new trabajo.Recepcionista (ans1,ans2,ans3,ans5,ans6);
+        trabajo.Recepcionista Miembro = new trabajo.Recepcionista (ans1,ans2,ans3,ans6);
         Principal.MiembrosR.add(Miembro);
         Principal.Turno.add(ans7);
         
-        int T = Principal.MiembrosR.size();
-        for(int i=0; i<T; i++){
-            System.out.println( Principal.MiembrosR.get(i).GetID() + " " + Principal.MiembrosR.get(i).GetNombre() + " " + Principal.MiembrosR.get(i).GetFecha() + " " + Principal.MiembrosR.get(i).GetPuesto() + " " + Principal.MiembrosR.get(i).GetJornada());
-        }
+      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void checkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkActionPerformed

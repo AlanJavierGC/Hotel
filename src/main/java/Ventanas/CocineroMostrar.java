@@ -107,7 +107,7 @@ public class CocineroMostrar extends javax.swing.JPanel {
          int actual_row = (int) Tabla_cocinero.getSelectedRow();
          System.out.println(actual_row);
          
-         Principal.Especialidad.remove(actual_row);
+         
          Principal.MiembrosC.remove(actual_row);
 
         
@@ -124,10 +124,9 @@ public class CocineroMostrar extends javax.swing.JPanel {
             model.setValueAt(Principal.MiembrosC.get(i).GetID(), i, 0);
             model.setValueAt(Principal.MiembrosC.get(i).GetNombre(), i, 1);
             model.setValueAt(Principal.MiembrosC.get(i).GetFecha(), i, 2);
-            model.setValueAt(Principal.MiembrosC.get(i).GetPuesto(), i, 3);
+            model.setValueAt(Principal.MiembrosC.get(i).getTitulo(), i, 3);
             model.setValueAt(Principal.MiembrosC.get(i).GetJornada(), i, 4);
-            model.setValueAt(Principal.Especialidad.get(i), i, 5);
-            model.setValueAt(Principal.Especialidad.get(i), i, 6);
+            model.setValueAt(Principal.MiembrosC.get(i).getEspecialidad(), i, 5);
             model.setValueAt(0, i, 6);
         }
         

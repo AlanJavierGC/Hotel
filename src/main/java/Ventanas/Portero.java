@@ -185,14 +185,10 @@ public class Portero extends javax.swing.JPanel {
             ans7 = "No";
         }
         
-        trabajo.Portero Miembro = new trabajo.Portero (ans1,ans2,ans3,ans5,ans6);
+        trabajo.Portero Miembro = new trabajo.Portero (ans1,ans2,ans3,ans6);
         Principal.MiembrosP.add(Miembro);
         Principal.edades.add(ans7);
         
-        int T = Principal.MiembrosP.size();
-        for(int i=0; i<T; i++){
-            System.out.println( Principal.MiembrosP.get(i).GetID() + " " + Principal.MiembrosP.get(i).GetNombre() + " " + Principal.MiembrosP.get(i).GetFecha() + " " + Principal.MiembrosP.get(i).GetPuesto() + " " + Principal.MiembrosP.get(i).GetJornada());
-        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BuleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuleanActionPerformed

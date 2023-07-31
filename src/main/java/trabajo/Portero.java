@@ -10,8 +10,8 @@ package trabajo;
  */
 public class Portero extends Empleado {
 
-    public Portero (String Id, String Nombre, String Fec_Nac, String Puesto, int Jornada){
-        super(Id, Nombre, Fec_Nac, Puesto, Jornada);
+    public Portero (String Id, String Nombre, String Fec_Nac, int Jornada){
+        super(Id, Nombre, Fec_Nac, Jornada);
     }
     
     // polimorfismo

@@ -9,9 +9,14 @@ package trabajo;
  * @author Familiar
  */
 public class Cocinero extends Empleado{
-    String Puesto;
-    public Cocinero (String Id, String Nombre, String Fec_Nac, String Puesto, int Jornada){
-        super(Id, Nombre, Fec_Nac, Puesto, Jornada);
+    public String Titulo;
+    public String Especialidad;
+    
+    public Cocinero (String Id, String Nombre, String Fec_Nac, int Jornada, String Titulo, String Especialidad){
+        super(Id, Nombre, Fec_Nac, Jornada);
+        this.Titulo = Titulo;
+        this.Especialidad = Especialidad;
+        
     }
     
     // sueldo polimorfismo
@@ -32,13 +37,25 @@ public class Cocinero extends Empleado{
         
         return s;
     }
+
+    public String getTitulo() {
+        return Titulo;
+    }
+
+    public void setTitulo(String Titulo) {
+        this.Titulo = Titulo;
+    }
     
-    public void setEspec(String especialidasd){
-        this.Puesto = especialidasd;
+    
+    public String getEspecialidad() {
+        return Especialidad;
     }
-    public String getEspec(){
-        return Puesto;
+
+    public void setEspecialidad(String Especialidad) {
+        this.Especialidad = Especialidad;
     }
+    
+ 
     
     
     // abstraccion
@@ -47,4 +64,5 @@ public class Cocinero extends Empleado{
                            "/t Pepara la comida" +
                            "/t Escupir en la sopa");
     }
+
 }

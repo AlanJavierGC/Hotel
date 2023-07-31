@@ -12,15 +12,13 @@ public abstract class Empleado {
     private String ID;
     private String Nombre;
     private String Fec_Nac;
-    private String Puesto;
     private int Jornada;
  //Este es el "main"//
     
-    public Empleado (String num, String nom, String date, String puesto, int jor){
+    public Empleado (String num, String nom, String date, int jor){
         this.ID = num;
         this.Nombre = nom;
         this.Fec_Nac = date;
-        this.Puesto = puesto;
         this.Jornada = jor;
     }
     
@@ -53,14 +51,6 @@ public abstract class Empleado {
     
     public String GetFecha() {
         return Fec_Nac;
-    }
-    //--------------------------//
-    public void SetPuesto (String puesto){
-        this.Puesto = puesto;
-    }
-    
-    public String GetPuesto() {
-        return Puesto;
     }
     //--------------------------//
     public void SetJornada (int jor){

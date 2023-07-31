@@ -9,8 +9,8 @@ package trabajo;
  * @author Familiar
  */
 public class Mucama extends Empleado {
-    public Mucama (String Id, String Nombre, String Fec_Nac, String Puesto, int Jornada){
-        super(Id, Nombre, Fec_Nac, Puesto, Jornada);
+    public Mucama (String Id, String Nombre, String Fec_Nac, int Jornada){
+        super(Id, Nombre, Fec_Nac, Jornada);
     }
     
     
