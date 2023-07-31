@@ -26,8 +26,8 @@ public abstract class Empleado {
     
     public abstract void Obligaciones();
     
-    public double sueldo(int hrs){
-        double sueldo = hrs * 80;
+    public int sueldo(int hrs){
+        int sueldo = hrs * 80;
         return sueldo;
     }
 

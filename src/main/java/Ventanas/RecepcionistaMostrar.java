@@ -4,6 +4,9 @@
  */
 package Ventanas;
 
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 /**
  *
  * @author jajas
@@ -29,7 +32,8 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        Tabla_rep = new javax.swing.JTable();
+        refresh = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Recepcionistas");
@@ -41,7 +45,7 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        Tabla_rep.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -53,14 +57,21 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(Tabla_rep);
+
+        refresh.setText("Actualizar");
+        refresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                refreshActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -69,6 +80,8 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(refresh)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -80,7 +93,8 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1)
+                    .addComponent(refresh))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE))
         );
@@ -88,13 +102,36 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+         int actual_row = (int) Tabla_rep.getSelectedRow();
+         System.out.println(actual_row);
+         
+         Principal.Turno.remove(actual_row);
+         Principal.MiembrosR.remove(actual_row);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
+        // TODO add your handling code here:  
+        DefaultTableModel modelodef = new DefaultTableModel(new String[]{"Id", "Nombre", "Fecha de nacimiento", "Jornada", "Turno nocturno?", "Sueldo"},Principal.MiembrosR.size()+2) ;
+        Tabla_rep.setModel((modelodef));
+        TableModel model = Tabla_rep.getModel();
+        
+        for(int i = 0; i<Principal.MiembrosR.size(); i++){ 
+            Object miembro = Principal.MiembrosR.get(i);
+            model.setValueAt(Principal.MiembrosR.get(i).GetID(), i, 0);
+            model.setValueAt(Principal.MiembrosR.get(i).GetNombre(), i, 1);
+            model.setValueAt(Principal.MiembrosR.get(i).GetFecha(), i, 2);
+            model.setValueAt(Principal.MiembrosR.get(i).GetJornada(), i, 3);
+            model.setValueAt(Principal.Turno.get(i), i, 4);
+            model.setValueAt(0, i, 5);
+        }
+    }//GEN-LAST:event_refreshActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable Tabla_rep;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JButton refresh;
     // End of variables declaration//GEN-END:variables
 }

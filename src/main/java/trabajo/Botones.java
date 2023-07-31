@@ -16,7 +16,7 @@ public class Botones extends Empleado{
     
     // polimorfismo
     @Override
-    public double sueldo(int hrs){
+    public int sueldo(int hrs){
         int extra = 0;
         int hrsext = hrs - 48;
         
@@ -24,7 +24,7 @@ public class Botones extends Empleado{
             hrs = hrs * 80;
         }
         
-        double s = hrs;
+        int s = hrs;
         
         return s;
     }

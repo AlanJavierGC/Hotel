@@ -16,7 +16,7 @@ public class Mucama extends Empleado {
     
     // polimorfismo
     @Override
-    public double sueldo(int hrs){
+    public int sueldo(int hrs){
         int extra = 0;
         int hrsext = hrs - 36;
         
@@ -28,7 +28,7 @@ public class Mucama extends Empleado {
             extra = hrsext * 200;
         }
         
-        double s = hrs + extra;
+        int s = hrs + extra;
         
         return s;
     }

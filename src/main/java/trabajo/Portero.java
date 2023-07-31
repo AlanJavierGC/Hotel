@@ -9,15 +9,16 @@ package trabajo;
  * @author Familiar
  */
 public class Portero extends Empleado {
+
     public Portero (String Id, String Nombre, String Fec_Nac, String Puesto, int Jornada){
         super(Id, Nombre, Fec_Nac, Puesto, Jornada);
     }
     
     // polimorfismo
     @Override
-    public double sueldo(int hrs){
+    public int sueldo(int hrs){
         int extra = 0;
-        int hrsext = hrs - 28;
+        int hrsext = hrs*6 - 28;
         
         if (hrs <= 28){
             hrs = hrs * 90;
@@ -27,8 +28,7 @@ public class Portero extends Empleado {
             extra = hrsext * 180;
         }
         
-        double s = hrs + extra;
-        
+        int s = hrs + extra;
         return s;
     }
     

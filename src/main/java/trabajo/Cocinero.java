@@ -16,7 +16,7 @@ public class Cocinero extends Empleado{
     
     // sueldo polimorfismo
     @Override
-    public double sueldo(int hrs){
+    public int sueldo(int hrs){
         int extra = 0;
         int hrsext = (hrs*6) - 48;
         
@@ -28,7 +28,7 @@ public class Cocinero extends Empleado{
             extra = hrsext * 320;
         }
         
-        double s = hrs + extra;
+        int s = hrs + extra;
         
         return s;
     }

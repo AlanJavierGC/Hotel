@@ -233,7 +233,7 @@ public class Cocinero extends javax.swing.JPanel {
     ArrayList<trabajo.Cocinero> Miembros = new ArrayList<trabajo.Cocinero>();
     
     private void GuardarArrayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarArrayMouseClicked
-        // TODO add your handling code here:
+        // captura los datos
         ans1 = Id_cocinero.getText();
         ans2 = Nombre_cocinero.getText();
         ans3 = Fec_nac_cocinero.getText();
@@ -242,14 +242,32 @@ public class Cocinero extends javax.swing.JPanel {
         String Alt = this.Jor_cocinero.getSelectedItem().toString();
         ans6 = Integer.parseInt(Alt);
 
-        
-        trabajo.Cocinero Miembro = new trabajo.Cocinero (ans1,ans2,ans3,ans4,ans6);
-        Principal.MiembrosC.add(Miembro);
-        Principal.Especialidad.add(ans5);
-        
+        //dETECTOR DE IDS REPETIDAS
+        boolean found = false;
+        for (int i = 0; i < Principal.MiembrosC.size(); i++) {
+            trabajo.Cocinero miembro = Principal.MiembrosC.get(i);
+            if (miembro.GetID().equals(ans1)) {
+                // Si encontramos un objeto con el mismo ID, actualizamos sus atributos
+                miembro.SetNombre(ans2);
+                miembro.SetFecha(ans3);
+                miembro.SetPuesto(ans4);
+                miembro.SetJornada(ans6);
+                found = true;
+                break;
+            }
+        }
+
+        // AGREGAR DATOS NO REPETIDOS
+        if (!found) {
+            trabajo.Cocinero miembro = new trabajo.Cocinero(ans1, ans2, ans3, ans4, ans6);
+            Principal.MiembrosC.add(miembro);
+        }
+        Principal.Especialidad.add(ans5);//SI LO METO FALLA XD (NO SE EDITA)
+
+        //ESTO LO PODEMOS BORRAR AL FINAL (ES LO QUE IMPRIME SI SE GUARDO O NO)
         int T = Principal.MiembrosC.size();
-        for(int i=0; i<T; i++){
-            System.out.println( Principal.MiembrosC.get(i).GetID() + " " + Principal.MiembrosC.get(i).GetNombre() + " " + Principal.MiembrosC.get(i).GetFecha() + " " + Principal.MiembrosC.get(i).GetPuesto() + " " + Principal.MiembrosC.get(i).GetJornada());
+        for (int i = 0; i < T; i++) {
+            System.out.println(Principal.MiembrosC.get(i).GetID() + " " + Principal.MiembrosC.get(i).GetNombre() + " " + Principal.MiembrosC.get(i).GetFecha() + " " + Principal.MiembrosC.get(i).GetPuesto() + " " + Principal.MiembrosC.get(i).GetJornada());
         }
         System.out.println("--------");
     }//GEN-LAST:event_GuardarArrayMouseClicked

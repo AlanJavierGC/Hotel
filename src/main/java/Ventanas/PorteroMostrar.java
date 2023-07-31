@@ -57,7 +57,7 @@ public class PorteroMostrar extends javax.swing.JPanel {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.Double.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -113,7 +113,7 @@ public class PorteroMostrar extends javax.swing.JPanel {
 
     private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel modelodef = new DefaultTableModel(new String[]{"Id", "Nombre", "Fecha de nacimiento", "Jornada", ".", "Sueldo"},Principal.MiembrosP.size()+2) ;
+        DefaultTableModel modelodef = new DefaultTableModel(new String[]{"Id", "Nombre", "Fecha de nacimiento", "Jornada", "Edad avanzada", "Sueldo"},Principal.MiembrosP.size()+2) ;
         Tabla_portero.setModel((modelodef));
         TableModel model = Tabla_portero.getModel();
         
@@ -122,8 +122,9 @@ public class PorteroMostrar extends javax.swing.JPanel {
             model.setValueAt(Principal.MiembrosP.get(i).GetID(), i, 0);
             model.setValueAt(Principal.MiembrosP.get(i).GetNombre(), i, 1);
             model.setValueAt(Principal.MiembrosP.get(i).GetFecha(), i, 2);
-            model.setValueAt(Principal.MiembrosP.get(i).GetJornada(), i, 4);
-
+            model.setValueAt(Principal.MiembrosP.get(i).GetJornada(), i, 3);
+            model.setValueAt(Principal.edades.get(i), i, 4);
+            model.setValueAt(0, i, 5);
         }
     }//GEN-LAST:event_refreshActionPerformed
 
