@@ -23,12 +23,9 @@ public class Principal extends javax.swing.JFrame {
         
     }
     //Informacion de cocinero
-    public static ArrayList<Integer> Sueldo = new ArrayList<>();
     public static ArrayList<trabajo.Cocinero> MiembrosC = new ArrayList<trabajo.Cocinero>();
     
     //Informacion de portero
-    public static ArrayList<String> edades = new ArrayList<>();
-    public static ArrayList<Integer> SueldoP = new ArrayList<>();
     public static ArrayList<trabajo.Portero> MiembrosP = new ArrayList<trabajo.Portero>();
     
     //Informacion de Recepcionista

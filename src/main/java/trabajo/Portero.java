@@ -9,19 +9,23 @@ package trabajo;
  * @author Familiar
  */
 public class Portero extends Empleado {
-
-    public Portero (String Id, String Nombre, String Fec_Nac, int Jornada){
+    public String TurnoNoche;
+    public int Sueldo;
+    public Portero (String Id, String Nombre, String Fec_Nac, int Jornada, String TurnoNoche, int Sueldo){
         super(Id, Nombre, Fec_Nac, Jornada);
+        this.TurnoNoche = TurnoNoche;
+        this.Sueldo = Sueldo;
     }
     
     // polimorfismo
     @Override
     public int sueldo(int hrs){
         int extra = 0;
-        int hrsext = hrs*6 - 28;
+        hrs = hrs * 6;
+        int hrsext = hrs - 28;
         
-        if (hrs <= 28){
-            hrs = hrs * 90;
+        if ((hrs - hrsext) <= 28){
+            hrs = (hrs - hrsext) * 90;
         }
         
         if (hrsext >= 0){
@@ -41,5 +45,22 @@ public class Portero extends Empleado {
                            "/t Ayudar al visitante con su equipaje hasta la recepcion.");
     }
 
+    public String getTurnoNoche() {
+        return TurnoNoche;
+    }
+
+    public void setTurnoNoche(String TurnoNoche) {
+        this.TurnoNoche = TurnoNoche;
+    }
+
+    public int getSueldo() {
+        return Sueldo;
+    }
+
+    public void setSueldo(int Sueldo) {
+        this.Sueldo = Sueldo;
+    }
+    
+    
 }
 

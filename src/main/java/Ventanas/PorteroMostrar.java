@@ -102,11 +102,6 @@ public class PorteroMostrar extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-                 int actual_row = (int) Tabla_portero.getSelectedRow();
-         System.out.println(actual_row);
-         
-         Principal.edades.remove(actual_row);
-         Principal.MiembrosP.remove(actual_row);
 
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -123,8 +118,8 @@ public class PorteroMostrar extends javax.swing.JPanel {
             model.setValueAt(Principal.MiembrosP.get(i).GetNombre(), i, 1);
             model.setValueAt(Principal.MiembrosP.get(i).GetFecha(), i, 2);
             model.setValueAt(Principal.MiembrosP.get(i).GetJornada(), i, 3);
-            model.setValueAt(Principal.edades.get(i), i, 4);
-            model.setValueAt(0, i, 5);
+            model.setValueAt(Principal.MiembrosP.get(i).getTurnoNoche(), i, 4);
+            model.setValueAt(Principal.MiembrosP.get(i).sueldo(Principal.MiembrosP.get(i).GetJornada()), i, 5);
         }
     }//GEN-LAST:event_refreshActionPerformed
 

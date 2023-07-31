@@ -92,6 +92,10 @@ public class Modificar extends javax.swing.JPanel {
 
         // instancias
         CocineroModificar cociPage = new CocineroModificar();
+        Mucama mucaPage = new Mucama();
+        Recepcionista recePage = new Recepcionista();
+        PorteroModificar portPage = new PorteroModificar();
+        Botones botoPage = new Botones();
 
         // Cocinero
         if (indice == 0){
@@ -104,44 +108,45 @@ public class Modificar extends javax.swing.JPanel {
             content.repaint();
         }
         // Mucama
-       // else if (indice == 1){
-         //   mucaPage.setSize(550, 328);
-         //   mucaPage.setLocation(0, 0);
+        else if (indice == 1){
+            mucaPage.setSize(550, 328);
+            mucaPage.setLocation(0, 0);
 
-         //   content.removeAll();
-         //   content.add(mucaPage, BorderLayout.CENTER);
-        //    content.revalidate();
-        //    content.repaint();
-       // }
+            content.removeAll();
+            content.add(mucaPage, BorderLayout.CENTER);
+            content.revalidate();
+            content.repaint();
+        }
         // Recepcionista
-      //  else if (indice == 2){
-        //    recePage.setSize(550, 328);
-         //   recePage.setLocation(0, 0);
-         //   content.removeAll();
-          //  content.add(recePage, BorderLayout.CENTER);
-          //  content.revalidate();
-          //  content.repaint();
-       // }
+        else if (indice == 2){
+            recePage.setSize(550, 328);
+            recePage.setLocation(0, 0);
+
+            content.removeAll();
+            content.add(recePage, BorderLayout.CENTER);
+            content.revalidate();
+            content.repaint();
+        }
         // Portero
-       // else if(indice == 3){
-        //    portPage.setSize(550, 328);
-        //    portPage.setLocation(0, 0);
+        else if(indice == 3){
+            portPage.setSize(550, 328);
+            portPage.setLocation(0, 0);
 
-         //   content.removeAll();
-         //   content.add(portPage, BorderLayout.CENTER);
-         //   content.revalidate();
-         //   content.repaint();
-       // }
+            content.removeAll();
+            content.add(portPage, BorderLayout.CENTER);
+            content.revalidate();
+            content.repaint();
+        }
         // Botones
-      //  else if(indice == 4){
-       //     botoPage.setSize(550, 328);
-        //    botoPage.setLocation(0, 0);
+        else if(indice == 4){
+            botoPage.setSize(550, 328);
+            botoPage.setLocation(0, 0);
 
-         //   content.removeAll();
-         //   content.add(botoPage, BorderLayout.CENTER);
-         //   content.revalidate();
-           // content.repaint();
-       // }
+            content.removeAll();
+            content.add(botoPage, BorderLayout.CENTER);
+            content.revalidate();
+            content.repaint();
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
 
