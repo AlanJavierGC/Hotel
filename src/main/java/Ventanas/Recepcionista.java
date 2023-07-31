@@ -173,22 +173,7 @@ public class Recepcionista extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        ans1 = id.getText();
-        ans2 = nom.getText();
-        ans3 = fec.getText();
-        String Alt = this.jor.getSelectedItem().toString();
-        ans6 = Integer.parseInt(Alt);
-
-        if(check.isSelected()){
-            ans7 = "Si";
-        }
-        else{
-            ans7 = "No";
-        }
-        
-        trabajo.Recepcionista Miembro = new trabajo.Recepcionista (ans1,ans2,ans3,ans6);
-        Principal.MiembrosR.add(Miembro);
-        Principal.Turno.add(ans7);
+     
         
       
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -105,7 +105,6 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
          int actual_row = (int) Tabla_rep.getSelectedRow();
          System.out.println(actual_row);
          
-         Principal.Turno.remove(actual_row);
          Principal.MiembrosR.remove(actual_row);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -121,7 +120,6 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
             model.setValueAt(Principal.MiembrosR.get(i).GetNombre(), i, 1);
             model.setValueAt(Principal.MiembrosR.get(i).GetFecha(), i, 2);
             model.setValueAt(Principal.MiembrosR.get(i).GetJornada(), i, 3);
-            model.setValueAt(Principal.Turno.get(i), i, 4);
             model.setValueAt(0, i, 5);
         }
     }//GEN-LAST:event_refreshActionPerformed

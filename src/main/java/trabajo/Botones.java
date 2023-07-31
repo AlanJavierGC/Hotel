@@ -10,8 +10,12 @@ package trabajo;
  */
 public class Botones extends Empleado{
     
-    public Botones (String Id, String Nombre, String Fec_Nac, int Jornada){
+    public String Peso;
+    public int Sueldo;
+    public Botones (String Id, String Nombre, String Fec_Nac, int Jornada, String Peso, int Sueldo){
     super(Id, Nombre, Fec_Nac, Jornada);
+    this.Peso =  Peso;
+    this.Sueldo = Sueldo;
     }
     
     // polimorfismo
@@ -34,6 +38,22 @@ public class Botones extends Empleado{
         System.out.println("/t Lleva maletas a las habiatciones" +
                            "/t Te lleva a tu habitacion" +
                            "/t Te ayuda con lo que puede");
+    }
+
+    public String getPeso() {
+        return Peso;
+    }
+
+    public void setPeso(String Peso) {
+        this.Peso = Peso;
+    }
+
+    public int getSueldo() {
+        return Sueldo;
+    }
+
+    public void setSueldo(int Sueldo) {
+        this.Sueldo = Sueldo;
     }
         
     

@@ -3,23 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package Ventanas;
+
 /**
  *
  * @author jajas
  */
-public class CocineroModificar extends javax.swing.JPanel {
-    
+public class BotonesModificar extends javax.swing.JPanel {
     String Id_cocineroa;
     String Nombre_cocineroa;
     String Fec_nac_cocineroa;
-    String Titulo_cocineroa;
-    String Espec_cocineroa;
     int Jor_cocineroa;
     int Sueldo;
+    String Pesoa;
     /**
-     * Creates new form CocineroModificar
+     * Creates new form BotonesModificar
      */
-    public CocineroModificar() {
+    public BotonesModificar() {
         initComponents();
     }
 
@@ -44,9 +43,7 @@ public class CocineroModificar extends javax.swing.JPanel {
         GuardarArray = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        Titulo_cocinero = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        Espec_cocinero = new javax.swing.JTextField();
+        Peso = new javax.swing.JTextField();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("ID: ");
@@ -78,7 +75,7 @@ public class CocineroModificar extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("Jornada: ");
 
-        Jor_cocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6", "7", "8" }));
+        Jor_cocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8" }));
         Jor_cocinero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jor_cocineroActionPerformed(evt);
@@ -105,20 +102,11 @@ public class CocineroModificar extends javax.swing.JPanel {
         });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setText("Titulo:");
+        jLabel5.setText("Peso:");
 
-        Titulo_cocinero.addActionListener(new java.awt.event.ActionListener() {
+        Peso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Titulo_cocineroActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setText("Especialidad:");
-
-        Espec_cocinero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Espec_cocineroActionPerformed(evt);
+                PesoActionPerformed(evt);
             }
         });
 
@@ -152,16 +140,10 @@ public class CocineroModificar extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Fec_nac_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Titulo_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Espec_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Peso, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,13 +160,10 @@ public class CocineroModificar extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(Titulo_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addComponent(Nombre_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(Espec_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(32, 32, 32)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Jor_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -200,29 +179,34 @@ public class CocineroModificar extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 550, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 314, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void Id_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Id_cocineroActionPerformed
         // TODO add your handling code here:
-
     }//GEN-LAST:event_Id_cocineroActionPerformed
 
     private void Nombre_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Nombre_cocineroActionPerformed
         // TODO add your handling code here:
-
     }//GEN-LAST:event_Nombre_cocineroActionPerformed
 
     private void Fec_nac_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Fec_nac_cocineroActionPerformed
         // TODO add your handling code here:
-
     }//GEN-LAST:event_Fec_nac_cocineroActionPerformed
 
     private void Jor_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jor_cocineroActionPerformed
@@ -230,6 +214,11 @@ public class CocineroModificar extends javax.swing.JPanel {
     }//GEN-LAST:event_Jor_cocineroActionPerformed
 
     private void GuardarArrayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarArrayMouseClicked
+        
+    }//GEN-LAST:event_GuardarArrayMouseClicked
+
+    private void GuardarArrayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarArrayActionPerformed
+        // TODO add your handling code here:
         // captura los datos
         Id_cocineroa = Id_cocinero.getText();
         Nombre_cocineroa = Nombre_cocinero.getText();
@@ -237,61 +226,47 @@ public class CocineroModificar extends javax.swing.JPanel {
         String Alt = this.Jor_cocinero.getSelectedItem().toString();
         Jor_cocineroa = Integer.parseInt(Alt);
 
-        Titulo_cocineroa = Titulo_cocinero.getText();
-        Espec_cocineroa = Espec_cocinero.getText();
+        Pesoa = Peso.getText();
+        
 
         //dETECTOR DE IDS REPETIDAS
         boolean found = false;
-        for (int i = 0; i < Principal.MiembrosC.size(); i++) {
-            trabajo.Cocinero miembro = Principal.MiembrosC.get(i);
+        for (int i = 0; i < Principal.MiembrosB.size(); i++) {
+            trabajo.Botones miembro = Principal.MiembrosB.get(i);
             if (miembro.GetID().equals(Id_cocineroa)) {
                 // Si encontramos un objeto con el mismo ID, actualizamos sus atributos
                 miembro.SetNombre(Nombre_cocineroa);
                 miembro.SetFecha(Fec_nac_cocineroa);
                 miembro.SetJornada(Jor_cocineroa);
-                miembro.setTitulo(Titulo_cocineroa);
-                miembro.setEspecialidad(Espec_cocineroa);
+                miembro.setPeso(Pesoa);
                 found = true;
                 break;
             }
         }
-    }//GEN-LAST:event_GuardarArrayMouseClicked
-
-    private void GuardarArrayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarArrayActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_GuardarArrayActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void Titulo_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Titulo_cocineroActionPerformed
+    private void PesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PesoActionPerformed
         // TODO add your handling code here:
-
-    }//GEN-LAST:event_Titulo_cocineroActionPerformed
-
-    private void Espec_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Espec_cocineroActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_Espec_cocineroActionPerformed
+    }//GEN-LAST:event_PesoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Espec_cocinero;
     private javax.swing.JTextField Fec_nac_cocinero;
     private javax.swing.JButton GuardarArray;
     private javax.swing.JTextField Id_cocinero;
     private javax.swing.JComboBox<String> Jor_cocinero;
     private javax.swing.JTextField Nombre_cocinero;
-    private javax.swing.JTextField Titulo_cocinero;
+    private javax.swing.JTextField Peso;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
