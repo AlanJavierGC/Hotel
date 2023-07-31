@@ -15,6 +15,7 @@ public class CocineroModificar extends javax.swing.JPanel {
     String Titulo_cocineroa;
     String Espec_cocineroa;
     int Jor_cocineroa;
+    int Sueldo;
     /**
      * Creates new form CocineroModificar
      */
@@ -265,7 +266,7 @@ public class CocineroModificar extends javax.swing.JPanel {
 
         // AGREGAR DATOS NO REPETIDOS
         if (!found) {
-            trabajo.Cocinero miembro = new trabajo.Cocinero(Id_cocineroa, Nombre_cocineroa, Fec_nac_cocineroa, Jor_cocineroa, Titulo_cocineroa, Espec_cocineroa);
+            trabajo.Cocinero miembro = new trabajo.Cocinero(Id_cocineroa, Nombre_cocineroa, Fec_nac_cocineroa, Jor_cocineroa, Titulo_cocineroa, Espec_cocineroa, Sueldo);
             Principal.MiembrosC.add(miembro);
         }
     }//GEN-LAST:event_GuardarArrayMouseClicked

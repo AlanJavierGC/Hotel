@@ -119,6 +119,7 @@ public class CocineroMostrar extends javax.swing.JPanel {
         Tabla_cocinero.setModel((modelodef));
         TableModel model = Tabla_cocinero.getModel();
         
+        
         for(int i = 0; i<Principal.MiembrosC.size(); i++){ 
             Object miembro = Principal.MiembrosC.get(i);
             model.setValueAt(Principal.MiembrosC.get(i).GetID(), i, 0);
@@ -127,7 +128,7 @@ public class CocineroMostrar extends javax.swing.JPanel {
             model.setValueAt(Principal.MiembrosC.get(i).getTitulo(), i, 3);
             model.setValueAt(Principal.MiembrosC.get(i).GetJornada(), i, 4);
             model.setValueAt(Principal.MiembrosC.get(i).getEspecialidad(), i, 5);
-            model.setValueAt(0, i, 6);
+            model.setValueAt(Principal.MiembrosC.get(i).sueldo(Principal.MiembrosC.get(i).GetJornada()), i, 6);
         }
         
     }//GEN-LAST:event_RefreshActionPerformed
