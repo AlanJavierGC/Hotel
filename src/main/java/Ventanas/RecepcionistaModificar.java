@@ -8,17 +8,17 @@ package Ventanas;
  *
  * @author jajas
  */
-public class PorteroModificar extends javax.swing.JPanel {
-    String Id_porteroa;
-    String Nombre_porteroa;
-    String Fec_nac_porteroa;
-    int Jor_porteroa;
+public class RecepcionistaModificar extends javax.swing.JPanel {
+    String Id_recepcionistaa;
+    String Nombre_recepcionistaa;
+    String Fec_nac_recepcionistaa;
+    int Jor_recepcionistaa;
     int Sueldo;
-    String Edad_Avanzada;
+    String Turno_recepcionista;
     /**
-     * Creates new form PorteroModificar
+     * Creates new form RecepcionistaModificar
      */
-    public PorteroModificar() {
+    public RecepcionistaModificar() {
         initComponents();
     }
 
@@ -43,6 +43,7 @@ public class PorteroModificar extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         CheckB = new javax.swing.JCheckBox();
+        jLabel7 = new javax.swing.JLabel();
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Nombre: ");
@@ -74,7 +75,7 @@ public class PorteroModificar extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("Jornada: ");
 
-        Jor_cocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7" }));
+        Jor_cocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6", "7", "8", "9", "10" }));
         Jor_cocinero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jor_cocineroActionPerformed(evt);
@@ -89,13 +90,15 @@ public class PorteroModificar extends javax.swing.JPanel {
         });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setText("Edad avanzada?");
+        jLabel6.setText("Turno noche");
 
         CheckB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CheckBActionPerformed(evt);
             }
         });
+
+        jLabel7.setText("!!De 8 horas para arriba se comienzan a contar horas extra!!");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -111,7 +114,9 @@ public class PorteroModificar extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Jor_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Jor_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel7))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -125,7 +130,7 @@ public class PorteroModificar extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(CheckB))
                     .addComponent(jButton1))
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,31 +153,22 @@ public class PorteroModificar extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(Jor_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Jor_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 328, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -188,48 +184,47 @@ public class PorteroModificar extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_Id_cocineroActionPerformed
 
+    private void Jor_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jor_cocineroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Jor_cocineroActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         // captura los datos
-        Id_porteroa = Id_cocinero.getText();
-        Nombre_porteroa = Nombre_cocinero.getText();
-        Fec_nac_porteroa = Fec_nac_cocinero.getText();
+        Id_recepcionistaa = Id_cocinero.getText();
+        Nombre_recepcionistaa = Nombre_cocinero.getText();
+        Fec_nac_recepcionistaa = Fec_nac_cocinero.getText();
         String Alt = this.Jor_cocinero.getSelectedItem().toString();
-        Jor_porteroa = Integer.parseInt(Alt);
-        
+        Jor_recepcionistaa = Integer.parseInt(Alt);
+
         if (CheckB.isSelected()){
             CheckB.toString();
-            Edad_Avanzada = "SI";
+            Turno_recepcionista = "NOCHE";
         }
         else{
             CheckB.toString();
-            Edad_Avanzada = "NO";
+            Turno_recepcionista = "DIA";
         }
-        
+
         //dETECTOR DE IDS REPETIDAS
         boolean found = false;
-        for (int i = 0; i < Principal.MiembrosP.size(); i++) {
-            trabajo.Portero miembro = Principal.MiembrosP.get(i);
-            if (miembro.GetID().equals(Id_porteroa)) {
+        for (int i = 0; i < Principal.MiembrosR.size(); i++) {
+            trabajo.Recepcionista miembro = Principal.MiembrosR.get(i);
+            if (miembro.GetID().equals(Id_recepcionistaa)) {
                 // Si encontramos un objeto con el mismo ID, actualizamos sus atributos
-                miembro.SetNombre(Nombre_porteroa);
-                miembro.SetFecha(Fec_nac_porteroa);
-                miembro.SetJornada(Jor_porteroa);
-                miembro.setEdadAvanzada(Edad_Avanzada);
+                miembro.SetNombre(Nombre_recepcionistaa);
+                miembro.SetFecha(Fec_nac_recepcionistaa);
+                miembro.SetJornada(Jor_recepcionistaa);
+                miembro.setTurnoNoche(Turno_recepcionista);
                 found = true;
                 break;
             }
         }
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void CheckBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CheckBActionPerformed
-
-    private void Jor_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jor_cocineroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Jor_cocineroActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -244,6 +239,7 @@ public class PorteroModificar extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

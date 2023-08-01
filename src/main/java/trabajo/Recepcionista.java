@@ -9,9 +9,12 @@ package trabajo;
  * @author Familiar
  */
 public class Recepcionista extends Empleado{
-    
-    public Recepcionista (String Id, String Nombre, String Fec_Nac, int Jornada){
+    public String TurnoNoche;
+    public int Sueldo;
+    public Recepcionista (String Id, String Nombre, String Fec_Nac, int Jornada, String TurnoNoche, int Sueldo){
         super(Id, Nombre, Fec_Nac, Jornada);
+        this.TurnoNoche = TurnoNoche;
+        this.Sueldo = Sueldo;
     }
     
     // polimorfismo
@@ -39,4 +42,22 @@ public class Recepcionista extends Empleado{
                            "/t Checar entrada y salida de las personas" +
                            "/t Dar la llave de la habitacion");
     }
+
+    public String getTurnoNoche() {
+        return TurnoNoche;
+    }
+
+    public void setTurnoNoche(String TurnoNoche) {
+        this.TurnoNoche = TurnoNoche;
+    }
+
+    public int getSueldo() {
+        return Sueldo;
+    }
+
+    public void setSueldo(int Sueldo) {
+        this.Sueldo = Sueldo;
+    }
+    
+    
 }

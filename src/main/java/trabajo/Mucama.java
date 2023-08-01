@@ -20,6 +20,7 @@ public class Mucama extends Empleado {
     @Override
     public int sueldo(int hrs){
         int extra = 0;
+        hrs = hrs*6;
         int hrsext = hrs - 36;
         
         if (hrs <= 36){

@@ -42,7 +42,6 @@ public class CocineroModificar extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         Jor_cocinero = new javax.swing.JComboBox<>();
         GuardarArray = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         Titulo_cocinero = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -97,13 +96,6 @@ public class CocineroModificar extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setText("Limpiar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("Titulo:");
 
@@ -129,10 +121,7 @@ public class CocineroModificar extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(GuardarArray)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2))
+                    .addComponent(GuardarArray)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -190,9 +179,7 @@ public class CocineroModificar extends javax.swing.JPanel {
                     .addComponent(Jor_cocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(GuardarArray)
-                    .addComponent(jButton2))
+                .addComponent(GuardarArray)
                 .addContainerGap(135, Short.MAX_VALUE))
         );
 
@@ -261,11 +248,6 @@ public class CocineroModificar extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_GuardarArrayActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void Titulo_cocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Titulo_cocineroActionPerformed
         // TODO add your handling code here:
 
@@ -285,7 +267,6 @@ public class CocineroModificar extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> Jor_cocinero;
     private javax.swing.JTextField Nombre_cocinero;
     private javax.swing.JTextField Titulo_cocinero;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -9,11 +9,11 @@ package trabajo;
  * @author Familiar
  */
 public class Portero extends Empleado {
-    public String TurnoNoche;
+    public String EdadAvanzada;
     public int Sueldo;
-    public Portero (String Id, String Nombre, String Fec_Nac, int Jornada, String TurnoNoche, int Sueldo){
+    public Portero (String Id, String Nombre, String Fec_Nac, int Jornada, String EdadAvanzada, int Sueldo){
         super(Id, Nombre, Fec_Nac, Jornada);
-        this.TurnoNoche = TurnoNoche;
+        this.EdadAvanzada = EdadAvanzada;
         this.Sueldo = Sueldo;
     }
     
@@ -45,12 +45,12 @@ public class Portero extends Empleado {
                            "/t Ayudar al visitante con su equipaje hasta la recepcion.");
     }
 
-    public String getTurnoNoche() {
-        return TurnoNoche;
+    public String getEdadAvanzada() {
+        return EdadAvanzada;
     }
 
-    public void setTurnoNoche(String TurnoNoche) {
-        this.TurnoNoche = TurnoNoche;
+    public void setEdadAvanzada(String EdadAvanzada) {
+        this.EdadAvanzada = EdadAvanzada;
     }
 
     public int getSueldo() {

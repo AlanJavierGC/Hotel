@@ -12,4 +12,11 @@
         <exec.mainClass>com.mycompany.trabajo.Trabajo</exec.mainClass>
     </properties>
     <name>Hotel</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE170</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -93,7 +93,7 @@ public class Modificar extends javax.swing.JPanel {
         // instancias
         CocineroModificar cociPage = new CocineroModificar();
         MucamaModificar mucaPage = new MucamaModificar();
-        Recepcionista recePage = new Recepcionista();
+        RecepcionistaModificar recePage = new RecepcionistaModificar();
         PorteroModificar portPage = new PorteroModificar();
         BotonesModificar botoPage = new BotonesModificar();
 

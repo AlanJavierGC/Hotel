@@ -110,7 +110,7 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
 
     private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
         // TODO add your handling code here:  
-        DefaultTableModel modelodef = new DefaultTableModel(new String[]{"Id", "Nombre", "Fecha de nacimiento", "Jornada", "Turno nocturno?", "Sueldo"},Principal.MiembrosR.size()+2) ;
+        DefaultTableModel modelodef = new DefaultTableModel(new String[]{"Id", "Nombre", "Fecha de nacimiento", "Jornada", "Turno", "Sueldo"},Principal.MiembrosR.size()+2) ;
         Tabla_rep.setModel((modelodef));
         TableModel model = Tabla_rep.getModel();
         
@@ -120,8 +120,9 @@ public class RecepcionistaMostrar extends javax.swing.JPanel {
             model.setValueAt(Principal.MiembrosR.get(i).GetNombre(), i, 1);
             model.setValueAt(Principal.MiembrosR.get(i).GetFecha(), i, 2);
             model.setValueAt(Principal.MiembrosR.get(i).GetJornada(), i, 3);
-            model.setValueAt(0, i, 5);
-        }
+            model.setValueAt(Principal.MiembrosR.get(i).getTurnoNoche(), i, 4);
+            model.setValueAt(Principal.MiembrosR.get(i).sueldo(Principal.MiembrosR.get(i).GetJornada()), i, 5);
+        }   
     }//GEN-LAST:event_refreshActionPerformed
 
 

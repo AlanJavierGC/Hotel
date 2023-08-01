@@ -32,7 +32,7 @@ public class PorteroMostrar extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        Tabla_portero = new javax.swing.JTable();
+        Tabla_rep = new javax.swing.JTable();
         refresh = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -45,7 +45,7 @@ public class PorteroMostrar extends javax.swing.JPanel {
             }
         });
 
-        Tabla_portero.setModel(new javax.swing.table.DefaultTableModel(
+        Tabla_rep.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -64,7 +64,7 @@ public class PorteroMostrar extends javax.swing.JPanel {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(Tabla_portero);
+        jScrollPane2.setViewportView(Tabla_rep);
 
         refresh.setText("Actualizar");
         refresh.addActionListener(new java.awt.event.ActionListener() {
@@ -102,15 +102,18 @@ public class PorteroMostrar extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        int actual_row = (int) Tabla_rep.getSelectedRow();
+        System.out.println(actual_row);
 
+        Principal.MiembrosR.remove(actual_row);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
         // TODO add your handling code here:
         DefaultTableModel modelodef = new DefaultTableModel(new String[]{"Id", "Nombre", "Fecha de nacimiento", "Jornada", "Edad avanzada", "Sueldo"},Principal.MiembrosP.size()+2) ;
-        Tabla_portero.setModel((modelodef));
-        TableModel model = Tabla_portero.getModel();
+        Tabla_rep.setModel((modelodef));
+        TableModel model = Tabla_rep.getModel();
         
         for(int i = 0; i<Principal.MiembrosP.size(); i++){ 
             Object miembro = Principal.MiembrosP.get(i);
@@ -118,14 +121,14 @@ public class PorteroMostrar extends javax.swing.JPanel {
             model.setValueAt(Principal.MiembrosP.get(i).GetNombre(), i, 1);
             model.setValueAt(Principal.MiembrosP.get(i).GetFecha(), i, 2);
             model.setValueAt(Principal.MiembrosP.get(i).GetJornada(), i, 3);
-            model.setValueAt(Principal.MiembrosP.get(i).getTurnoNoche(), i, 4);
+            model.setValueAt(Principal.MiembrosP.get(i).getEdadAvanzada(), i, 4);
             model.setValueAt(Principal.MiembrosP.get(i).sueldo(Principal.MiembrosP.get(i).GetJornada()), i, 5);
         }
     }//GEN-LAST:event_refreshActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable Tabla_portero;
+    private javax.swing.JTable Tabla_rep;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
